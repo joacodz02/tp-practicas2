@@ -1,0 +1,26 @@
+ 
+def cat_bmi(bmi):
+    if bmi < 19.5: r= "Estas delgado"
+    elif bmi <= 24.9: r= "Peso dentro de los parámetros"
+    elif bmi <= 29.9: r= "Tenes sobrepeso”
+    elif bmi <= 34.9: r= "obesidad nivel 1"
+    elif bmi <= 39.9: r= "obesidad nivel 2"
+    else: r= “ obesidad nivel 3"
+    return r
+def imprimir(a):
+    print (a["Name"].upper()+" "+a["Apellido"].upper()+" "+a["Edad"]+" "+a["Peso"]+" "+a["Altura"]+" "+a["Direccion"].upper()+" "+a["Telefono"]+" " + result.upper() + " " + str(a["BMI"]))
+print("welcome to the program . .")
+person={"Nombre":"",
+        "Apellido":"",
+        "Edad":0,
+        "Peso":0,
+        "Altura":0,
+        "Direccion":"",
+        "Telefono":""}
+for x in person:
+     person[x]=input(f"type your {x} : ")
+bmi=round(float(person['Altura'])/((float(person['Peso']))**2),2)
+person["BMI"]=bmi
+result = "Carajo!"
+result=cat_bmi(bmi)
+imprimir(person)
