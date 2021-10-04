@@ -1,0 +1,63 @@
+from gpiozero import LED
+from gpiozero import Boton
+from time import sleep
+
+A = LED(14) # 1 0 1 0 1 0 1 0 1 0
+B = LED(15) # 0 1 1 0 0 1 1 0 0 0
+C = LED(17) # 0 0 0 1 1 1 1 0 0 0
+D = LED(18) # 0 0 0 0 0 0 0 1 1 0
+boton = Boton(2)
+pulso = 0
+while pulso <= 10:
+    if pulso == 10: pulso = 0
+    if pulso== 0 :  
+        A.off()
+        B.off()
+        C.off()
+        D.off()
+    elif pulso== 1 :
+        A.on()
+        B.off()
+        C.off()
+        D.off()
+    elif pulso== 2 :
+        A.off()
+        B.on()
+        C.off()
+        D.off()
+    elif pulso== 3 :
+        A.on()
+        B.on()
+        C.off()
+        D.off()
+    elif pulso== 4 :
+        A.off()
+        B.off()
+        C.on()
+        D.off()
+    elif pulso== 5 :   
+        A.on()
+        B.off()
+        C.on()
+        D.off()
+    elif pulso== 6 :
+        A.off()
+        B.on()
+        C.on()
+        D.off()
+    elif pulso== 7 :
+        A.on()
+        B.on()
+        C.on()
+        D.off() 
+    elif pulso == 8 :
+        A.off()
+        B.off()
+        C.off()
+        D.on()
+    Demas A.on()
+        B.off()
+        C.off()
+        D.on()    
+    button.wait_for_press()
+    pulso = pulso + 1
